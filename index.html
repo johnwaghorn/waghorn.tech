@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="waghorn_technology_ltd_logo.png">
-    <title>Waghorn Technology Ltd</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Waghorn Technology</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f0f0;
             color: #333;
             line-height: 1.6;
         }
         header {
             background-color: #546e7a;
-            color: #eceff1;
+            color: #ffffff;
             padding: 20px 0;
             text-align: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -24,17 +28,21 @@
         header img {
             width: 150px;
             height: auto;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-top: 5;
         }
         nav {
             background-color: #78909c;
-            color: #eceff1;
+            color: #ffffff;
             text-align: center;
             padding: 10px 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
         nav a {
-            color: #eceff1;
+            color: #ffffff;
             text-decoration: none;
             padding: 10px 20px;
             margin: 0 5px;
@@ -42,7 +50,7 @@
             transition: background-color 0.3s;
         }
         nav a:hover {
-            background-color: #607d8b;
+            background-color: #546e7a;
         }
         .container {
             max-width: 1200px;
@@ -51,16 +59,33 @@
         }
         section {
             margin-bottom: 40px;
+            background-color: #ffffff;
+            padding: 50px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
+
+        section h2 {
+            margin-top: 0;
+            padding-bottom: 20px;
+        }
+
+        section p {
+            margin-bottom: 0;
+        }
+
+
         h2 {
             border-bottom: 2px solid #546e7a;
             padding-bottom: 10px;
             margin-bottom: 20px;
             font-weight: 600;
         }
+
         .services {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
         .service {
@@ -80,13 +105,29 @@
             margin-bottom: 15px;
         }
         .service p {
-            color: #777;
+            color: #555;
             font-size: 1em;
             line-height: 1.6;
         }
+        .contact-button {
+            display: inline-block;
+            background-color: #546e7a;
+            color: #ffffff;
+            padding: 10px 30px;
+            border-radius: 25px; 
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+
+        .contact-button:hover {
+            background-color: #78909c;
+        }
+
         footer {
             background-color: #546e7a;
-            color: #eceff1;
+            color: #ffffff;
             text-align: center;
             padding: 20px 0;
             position: relative;
@@ -99,7 +140,9 @@
 <body>
 
     <header>
-        <img src="waghorn_technology_ltd_logo.png" alt="Software Services Logo">
+        <a href="/">
+            <img src="waghorn_technology_ltd_logo.png" alt="Software Services Logo">
+        </a>
         <h1>Waghorn Technology Ltd</h1>
     </header>
 
@@ -113,7 +156,7 @@
     <div class="container">
         <section id="home">
             <h2>Welcome</h2>
-            <p>We provide high-quality software solutions and consultancy tailored to your business needs.</p>
+            <p>We provide high-quality software solutions and consultancy tailored to your business needs. Specialising in Python, Web Development, and Cloud engineering, we build software that adds value to your business. We produce solutions that are simple, well-documented, and designed for maintainability.</p>
         </section>
 
         <section id="services">
@@ -141,7 +184,8 @@
 
         <section id="contact">
             <h2>Contact Us</h2>
-            <a href="mailto:enquiries@waghorn.tech">enquiries@waghorn.tech</a> 
+            <p>We're here to help. Feel free to reach out to us.</p>
+            <a href="mailto:enquiries@waghorn.tech" class="contact-button">enquiries@waghorn.tech</a>
         </section>
     </div>
 
