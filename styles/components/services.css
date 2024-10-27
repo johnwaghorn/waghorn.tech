@@ -1,0 +1,58 @@
+.services {
+    background: white;
+    padding: var(--spacing-xl) 0;
+}
+
+.services-grid {
+    display: grid;
+    gap: var(--spacing-lg);
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.service-card {
+    background: var(--gray-50);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-sm);
+    text-align: center;
+    transition: box-shadow var(--transition-base);
+}
+
+.service-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto var(--spacing-sm);
+    color: var(--primary);
+}
+
+.service-title {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--gray-800);
+}
+
+.about {
+    padding: var(--spacing-xl) 0;
+    background: var(--gray-50);
+}
+
+.about-content {
+    max-width: 48rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact {
+    padding: var(--spacing-xl) 0;
+    background: white;
+    text-align: center;
+}

@@ -1,202 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Waghorn Technology Ltd, a trusted ally in bespoke software solutions and consultancy. With expertise in Python, Web Development, and Cloud engineering, we craft tailored solutions to enhance your business."/>
-    <link rel="icon" href="waghorn_technology_ltd_logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <meta name="description"
+        content="Waghorn Technology Ltd - Expert software solutions and consultancy specializing in Python, Web Development, and Cloud engineering.">
     <title>Waghorn Technology</title>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #546e7a;
-            color: #ffffff;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        }
-        header img {
-            width: 150px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 2rem;
-            margin-top: 5;
-        }
-        nav {
-            background-color: #78909c;
-            color: #ffffff;
-            text-align: center;
-            padding: 10px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        }
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 5px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-        nav a:hover {
-            background-color: #546e7a;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-        section {
-            margin-bottom: 40px;
-            background-color: #ffffff;
-            padding: 50px 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        section h2 {
-            margin-top: 0;
-            padding-bottom: 20px;
-        }
-
-        section p {
-            margin-bottom: 0;
-        }
-
-
-        h2 {
-            border-bottom: 2px solid #546e7a;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        .service {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-        }
-        .service:hover {
-            transform: translateY(-10px);
-        }
-        .service h3 {
-            color: #546e7a;
-            font-size: 1.5em;
-            margin-bottom: 15px;
-        }
-        .service p {
-            color: #555;
-            font-size: 1em;
-            line-height: 1.6;
-        }
-        .contact-button {
-            display: inline-block;
-            background-color: #546e7a;
-            color: #ffffff;
-            padding: 10px 30px;
-            border-radius: 25px; 
-            text-decoration: none;
-            transition: background-color 0.3s;
-            margin-top: 20px;
-            font-size: 1.1rem;
-        }
-
-        .contact-button:hover {
-            background-color: #78909c;
-        }
-
-        footer {
-            background-color: #546e7a;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-
-    <header>
-        <a href="/">
-            <img width="1963" height="2009" src="waghorn_technology_ltd_logo.webp" alt="Waghorn Technology Ltd logo">
-        </a>
-        <h1>Waghorn Technology Ltd</h1>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="waghorn_technology_ltd_logo.webp" alt="Waghorn Technology Logo" class="logo">
+                    <span class="company-name">Waghorn Technology</span>
+                </div>
+                <nav class="nav-desktop">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+                <button class="mobile-menu-button" aria-label="Toggle menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="mobile-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
     </header>
-
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="container">
-        <section id="home">
-            <h2>Welcome</h2>
-            <p>We provide high-quality software solutions and consultancy tailored to your business needs. Specialising in Python, Web Development, and Cloud engineering, we build software that adds value to your business. We produce solutions that are simple, well-documented, and designed for maintainability.</p>
-        </section>
-
-        <section id="services">
-            <h2>Our Services</h2>
-            <div class="services">
-                <div class="service">
-                    <h3>Software Consulting</h3>
-                    <p>We offer expert advice and guidance to help you make informed decisions about your software projects.</p>
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Building Tomorrow's Technology Today</h1>
+            <p>We provide high-quality software solutions and consultancy tailored to your business needs, specializing
+                in Python, Web Development, and Cloud engineering.</p>
+            <a href="#contact" class="button">Get Started</a>
+        </div>
+    </section>
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <h3 class="service-title">Software Consulting</h3>
+                    <p>Expert advice and guidance for your software projects</p>
                 </div>
-                <div class="service">
-                    <h3>Web Development</h3>
-                    <p>We create responsive and user-friendly websites to help your business grow.</p>
+                <div class="service-card">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                    <h3 class="service-title">Web Development</h3>
+                    <p>Responsive and user-friendly websites that drive growth</p>
                 </div>
-                <div class="service">
-                    <h3>AWS & Azure Engineering</h3>
-                    <p>We provide AWS and Azure engineering services to help you leverage the power of cloud computing.</p>
+                <div class="service-card">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                    </svg>
+                    <h3 class="service-title">Cloud Engineering</h3>
+                    <p>AWS and Azure solutions to power your infrastructure</p>
                 </div>
             </div>
-        </section>
-
-        <section id="about">
-            <h2>About Us</h2>
-            <p>We are a team of experienced software developers and consultants dedicated to delivering exceptional results for our clients.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>We're here to help. Feel free to reach out to us.</p>
-            <a href="mailto:enquiries@waghorn.tech" class="contact-button">enquiries@waghorn.tech</a>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; <span id="currentYear"></span> Waghorn Technology Ltd. All Rights Reserved.</p>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About Us</h2>
+                <p>We are a team of experienced software developers and consultants dedicated to delivering exceptional
+                    results. Our solutions are simple, well-documented, and designed for maintainability.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p>We're here to help. Reach out to us to discuss your next project.</p>
+            <div class="vertical-space"></div>
+            <a href="mailto:enquiries@waghorn.tech" class="button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                enquiries@waghorn.tech
+            </a>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Waghorn Technology Ltd. All Rights Reserved.</p>
+        </div>
     </footer>
-
-    <script>
-        document.getElementById("currentYear").textContent = new Date().getFullYear();
-    </script>
-
+    <button class="scroll-top" aria-label="Scroll to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+    <script src="main.js"></script>
 </body>
+
 </html>
