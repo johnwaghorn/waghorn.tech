@@ -28,12 +28,16 @@
     justify-content: center;
     cursor: pointer;
     opacity: 0;
-    transition: opacity var(--transition-base);
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity var(--transition-base), visibility var(--transition-base);
     border: none;
 }
 
 .scroll-top.visible {
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .scroll-top:hover {

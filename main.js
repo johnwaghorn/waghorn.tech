@@ -34,11 +34,13 @@ function toggleMobileMenu() {
     const isOpen = elements.mobileMenu.classList.toggle('active');
     const menuIcon = elements.menuButton.querySelector('svg');
     menuIcon.innerHTML = isOpen ? menuIcons.close : menuIcons.open;
+    elements.menuButton.setAttribute('aria-expanded', isOpen);
 }
 
 function resetMobileMenu() {
     elements.mobileMenu.classList.remove('active');
     elements.menuButton.querySelector('svg').innerHTML = menuIcons.open;
+    elements.menuButton.setAttribute('aria-expanded', 'false');
 }
 
 function handleSmoothScroll(e) {
