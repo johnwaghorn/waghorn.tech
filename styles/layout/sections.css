@@ -1,35 +1,38 @@
-.hero {
-    padding: 8rem 0 5rem;
-    text-align: center;
+.section {
+    border-bottom: 1px solid var(--rule);
+    scroll-margin-top: calc(var(--header-height) + 8px);
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--gray-900);
-    margin-bottom: var(--spacing-md);
+.section-dark {
+    background: var(--ink);
+    color: var(--paper);
+    scroll-margin-top: calc(var(--header-height) + 8px);
 }
 
-@media (min-width: 768px) {
-    .hero h1 {
-        font-size: 3rem;
-    }
+.label {
+    display: block;
+    font-family: var(--font-family-mono);
+    font-size: 12px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--faintest);
 }
 
-.hero p {
-    font-size: 1.25rem;
-    color: var(--gray-600);
-    max-width: 42rem;
-    margin: 0 auto var(--spacing-lg);
+.label-accent {
+    color: var(--accent);
+}
+
+.section-dark .label {
+    color: var(--accent-on-dark);
 }
 
 .section-title {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: var(--spacing-xl);
-    color: var(--gray-900);
+    font-size: 34px;
+    letter-spacing: -.025em;
 }
 
-.vertical-space {
-    height: 40px;
+@media (max-width: 759px) {
+    .section-title {
+        font-size: 26px;
+    }
 }

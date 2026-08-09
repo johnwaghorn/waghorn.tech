@@ -4,143 +4,329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waghorn Technology - UK software consultancy</title>
     <meta name="description"
-        content="Waghorn Technology Ltd - Expert software solutions and consultancy specialising in Python, Web Development, and Cloud engineering.">
+        content="Waghorn Technology Ltd is a small UK software consultancy. Senior Python, web and cloud engineering for businesses and early-stage teams. Built simply, documented properly, handed over cleanly.">
     <link rel="canonical" href="https://waghorn.tech/">
-    <title>Waghorn Technology</title>
+    <meta name="theme-color" content="#f6f6f4">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://waghorn.tech/">
+    <meta property="og:site_name" content="Waghorn Technology">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:title" content="Waghorn Technology - UK software consultancy">
+    <meta property="og:description"
+        content="A small UK software consultancy. Senior Python, web and cloud engineering for businesses and early-stage teams.">
+    <meta property="og:image" content="https://waghorn.tech/waghorn_technology_ltd_logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Waghorn Technology - UK software consultancy">
+    <meta name="twitter:description"
+        content="A small UK software consultancy. Senior Python, web and cloud engineering for businesses and early-stage teams.">
+    <meta name="twitter:image" content="https://waghorn.tech/waghorn_technology_ltd_logo.png">
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="preload" href="fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/ibm-plex-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="styles/base/self-hosted-fonts.css">
     <link rel="stylesheet" href="styles/base/variables.css">
     <link rel="stylesheet" href="styles/base/reset.css">
     <link rel="stylesheet" href="styles/layout/container.css">
+    <link rel="stylesheet" href="styles/layout/ruled-grid.css">
     <link rel="stylesheet" href="styles/layout/sections.css">
     <link rel="stylesheet" href="styles/components/header.css">
     <link rel="stylesheet" href="styles/components/nav.css">
     <link rel="stylesheet" href="styles/components/buttons.css">
+    <link rel="stylesheet" href="styles/components/hero.css">
     <link rel="stylesheet" href="styles/components/services.css">
+    <link rel="stylesheet" href="styles/components/stack.css">
+    <link rel="stylesheet" href="styles/components/about.css">
+    <link rel="stylesheet" href="styles/components/contact.css">
     <link rel="stylesheet" href="styles/components/footer.css">
+    <link rel="stylesheet" href="styles/components/scroll-to-top.css">
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "ProfessionalService",
         "name": "Waghorn Technology",
+        "legalName": "Waghorn Technology Ltd",
         "url": "https://waghorn.tech",
         "logo": "https://waghorn.tech/waghorn_technology_ltd_logo.webp",
+        "image": "https://waghorn.tech/waghorn_technology_ltd_logo.png",
         "email": "enquiries@waghorn.tech",
-        "description": "Expert software solutions and consultancy specialising in Python, Web Development, and Cloud engineering."
+        "description": "A small UK software consultancy providing senior Python, web and cloud engineering to businesses and early-stage teams.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Kingdom"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "GB"
+        },
+        "knowsAbout": ["Software consultancy", "Web development", "Cloud engineering", "AI integration", "Python", "AWS", "Azure"]
     }
     </script>
 </head>
+
 <body>
+    <a class="skip-link" href="#top">Skip to content</a>
+
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo-container">
-                    <a href="#home">
-                        <img src="waghorn_technology_ltd_logo.webp" alt="Waghorn Technology Logo" class="logo">
-                    </a>
-                    <span class="company-name">Waghorn Technology</span>
-                </div>
-                <nav class="nav-desktop">
-                    <a href="#home" class="nav-link">Home</a>
-                    <a href="#services" class="nav-link">Services</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#contact" class="nav-link">Contact</a>
+                <a href="#top" class="logo-lockup">
+                    <img src="waghorn_technology_ltd_logo.webp" alt="" class="logo" width="1963" height="2009">
+                    <span class="wordmark">waghorn<span class="wordmark-suffix">.tech</span></span>
+                </a>
+                <nav class="nav" aria-label="Primary">
+                    <a href="#services" class="nav-section-link">services</a>
+                    <a href="#stack" class="nav-section-link">stack</a>
+                    <a href="#about" class="nav-section-link">about</a>
+                    <a href="#contact" class="button button-compact">get in touch</a>
                 </nav>
-                <button class="mobile-menu-button" aria-label="Toggle menu" aria-expanded="false">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
-            <div class="mobile-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
             </div>
         </div>
     </header>
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Building Tomorrow's Technology Today</h1>
-            <p>We provide high-quality software solutions and consultancy tailored to your organisation's needs, specialising
-                in Python, Web Development, and Cloud engineering.</p>
-            <a href="#contact" class="button">Get Started</a>
-        </div>
-    </section>
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="9" cy="7" r="4"></circle>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                    </svg>
-                    <h3 class="service-title">Software Consultancy</h3>
-                    <p>Expert advice and guidance for your software projects</p>
-                </div>
-                <div class="service-card">
-                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="16 18 22 12 16 6"></polyline>
-                        <polyline points="8 6 2 12 8 18"></polyline>
-                    </svg>
-                    <h3 class="service-title">Web Development</h3>
-                    <p>Responsive and user-friendly websites that drive growth</p>
-                </div>
-                <div class="service-card">
-                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
-                    </svg>
-                    <h3 class="service-title">Cloud Engineering</h3>
-                    <p>AWS and Azure solutions to power your infrastructure</p>
+
+    <main>
+        <section id="top" class="section">
+            <div class="container">
+                <div class="ruled-grid hero-grid">
+                    <div class="hero-lead">
+                        <span class="label label-accent hero-eyebrow">Software consultancy &middot; United Kingdom</span>
+                        <h1 class="hero-title">A small team that ships software you can maintain.</h1>
+                        <p class="hero-body">We work with UK businesses and early-stage teams who need senior
+                            engineering without the overhead of hiring for it. Python, web, and cloud. Built simply,
+                            documented properly, handed over cleanly.</p>
+                        <div class="hero-actions">
+                            <a href="#contact" class="button">Start a conversation →</a>
+                            <a href="#services" class="button-quiet">See what we do</a>
+                        </div>
+                    </div>
+                    <div class="hero-aside">
+                        <ol class="hero-points">
+                            <li class="hero-point">
+                                <span class="hero-point-number">01</span>
+                                <div>
+                                    <div class="hero-point-title">You talk to the people writing the code</div>
+                                    <div class="hero-point-body">No account layer, no handoff to a junior team.</div>
+                                </div>
+                            </li>
+                            <li class="hero-point">
+                                <span class="hero-point-number">02</span>
+                                <div>
+                                    <div class="hero-point-title">Scoped in weeks, not quarters</div>
+                                    <div class="hero-point-body">Fixed, honest estimates and a working thing early.</div>
+                                </div>
+                            </li>
+                            <li class="hero-point">
+                                <span class="hero-point-number">03</span>
+                                <div>
+                                    <div class="hero-point-title">Yours to keep</div>
+                                    <div class="hero-point-body">Your repo, your cloud account, documentation that means
+                                        something.</div>
+                                </div>
+                            </li>
+                        </ol>
+                        <div class="hero-strip">
+                            <span>est. Waghorn Technology Ltd</span>
+                            <a href="mailto:enquiries@waghorn.tech">enquiries@waghorn.tech</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <h2 class="section-title">About Us</h2>
-                <p>We are a team of experienced software developers and consultants dedicated to delivering exceptional
-                    results. Our solutions are simple, well-documented, and designed for maintainability.</p>
+        </section>
+
+        <section id="services" class="section">
+            <div class="container">
+                <div class="ruled-grid services-header">
+                    <h2 class="section-title">Three things we're genuinely good at</h2>
+                    <span class="label">Services</span>
+                </div>
+                <div class="ruled-grid services-grid">
+                    <article class="service">
+                        <div class="service-slug">/ consultancy</div>
+                        <h3 class="service-title">Software consultancy</h3>
+                        <p class="service-body">A second pair of eyes on architecture, hiring, or a project that has
+                            stalled. We'll tell you what we'd actually do, including when the answer is to build less.
+                        </p>
+                        <ul class="service-tags">
+                            <li>architecture review</li>
+                            <li>technical due diligence</li>
+                            <li>AI integration</li>
+                        </ul>
+                    </article>
+                    <article class="service">
+                        <div class="service-slug">/ product</div>
+                        <h3 class="service-title">Web development</h3>
+                        <p class="service-body">Internal tools, customer portals, APIs and the sites in front of them.
+                            Fast, accessible, and boring in the ways software should be boring.</p>
+                        <ul class="service-tags">
+                            <li>web apps</li>
+                            <li>APIs &amp; integrations</li>
+                            <li>internal tooling</li>
+                        </ul>
+                    </article>
+                    <article class="service">
+                        <div class="service-slug">/ infrastructure</div>
+                        <h3 class="service-title">Cloud engineering</h3>
+                        <p class="service-body">AWS and Azure set up the way a small team can afford to run it.
+                            Infrastructure as code, sensible pipelines, and a bill you understand.</p>
+                        <ul class="service-tags">
+                            <li>AWS &amp; Azure</li>
+                            <li>CI/CD</li>
+                            <li>cost review</li>
+                        </ul>
+                    </article>
+                </div>
             </div>
-        </div>
-    </section>
-    <section id="contact" class="contact">
+        </section>
+
+        <section id="stack" class="section stack">
+            <div class="container">
+                <div class="ruled-grid stack-inner">
+                    <div>
+                        <span class="label">Stack</span>
+                        <h2 class="stack-title">Tools we reach for first</h2>
+                        <p class="stack-intro">Defaulting to tools that are easy to run, maintain, and hire for later.
+                            Rust is in the mix for open-source projects and systems work where correctness matters.</p>
+                    </div>
+                    <div class="stack-groups">
+                        <div class="stack-group">
+                            <h3 class="stack-group-title">Languages</h3>
+                            <ul>
+                                <li>Python</li>
+                                <li>TypeScript</li>
+                                <li>Rust</li>
+                                <li>Bash</li>
+                            </ul>
+                        </div>
+                        <div class="stack-group">
+                            <h3 class="stack-group-title">Frameworks</h3>
+                            <ul>
+                                <li>Django</li>
+                                <li>FastAPI</li>
+                                <li>React</li>
+                                <li>Vite</li>
+                            </ul>
+                        </div>
+                        <div class="stack-group">
+                            <h3 class="stack-group-title">Cloud</h3>
+                            <ul>
+                                <li>AWS</li>
+                                <li>Azure</li>
+                                <li>Terraform</li>
+                                <li>AWS CDK</li>
+                            </ul>
+                        </div>
+                        <div class="stack-group">
+                            <h3 class="stack-group-title">Data</h3>
+                            <ul>
+                                <li>PostgreSQL</li>
+                                <li>Redis</li>
+                                <li>SQL</li>
+                                <li>Pandas</li>
+                            </ul>
+                        </div>
+                        <div class="stack-group">
+                            <h3 class="stack-group-title">Delivery</h3>
+                            <ul>
+                                <li>GitHub Actions</li>
+                                <li>Pytest</li>
+                                <li>Sentry</li>
+                                <li>Docker</li>
+                            </ul>
+                        </div>
+                        <div class="stack-group">
+                            <h3 class="stack-group-title">Also comfortable with</h3>
+                            <ul>
+                                <li>Kubernetes</li>
+                                <li>Grafana</li>
+                                <li>Legacy systems</li>
+                                <li>your stack</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <div class="ruled-grid about-grid">
+                    <div class="about-main">
+                        <span class="label">About</span>
+                        <h2 class="section-title">We're a small team, and that's the point.</h2>
+                        <p>Waghorn Technology is a UK software consultancy made up of experienced developers who'd
+                            rather do a few projects properly than many at once. Most of our work comes from people
+                            we've worked with before.</p>
+                        <p>We like problems where the technology is in service of something concrete: a process that's
+                            eating someone's week, a system that's grown past what it was designed for, a product that
+                            needs to exist before the next funding conversation.</p>
+                        <p>If that sounds like your situation, we're easy to talk to and quick to tell you if we're not
+                            the right fit.</p>
+                    </div>
+                    <div class="about-process">
+                        <span class="label">How we work</span>
+                        <div class="process-step">
+                            <div class="process-step-label">01 - Talk</div>
+                            <div class="process-step-body">A call, no charge. You describe the problem, we say whether we
+                                can help.</div>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-step-label">02 - Scope</div>
+                            <div class="process-step-body">A short written proposal: what we'll build, how long, what it
+                                costs.</div>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-step-label">03 - Build</div>
+                            <div class="process-step-body">Weekly demos in your repo. You see progress, not status
+                                reports.</div>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-step-label">04 - Hand over</div>
+                            <div class="process-step-body">Documentation, a walkthrough, and support for as long as you
+                                need it.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-dark">
+            <div class="container">
+                <div class="ruled-grid contact-main">
+                    <div>
+                        <span class="label">Contact</span>
+                        <h2 class="contact-title">Tell us what you're trying to build.</h2>
+                        <p class="contact-body">A short email is plenty to start. We reply to everything within a
+                            working day.</p>
+                    </div>
+                    <div class="contact-actions">
+                        <a href="mailto:enquiries@waghorn.tech" class="contact-email">enquiries@waghorn.tech →</a>
+                        <div class="contact-meta">Registered in England &amp; Wales<br>Remote-first, UK hours</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="section-dark">
         <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <p>We're here to help. Contact us to discuss your next project.</p>
-            <div class="vertical-space"></div>
-            <a href="mailto:enquiries@waghorn.tech" class="button">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-                enquiries@waghorn.tech
-            </a>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="currentYear"></span> Waghorn Technology Ltd. All Rights Reserved.</p>
+            <div class="ruled-grid footer-strip">
+                <span>&copy; Waghorn Technology Ltd. All rights reserved.</span>
+                <span>waghorn.tech</span>
+            </div>
         </div>
     </footer>
-    <button class="scroll-top" aria-label="Scroll to top">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="18 15 12 9 6 15"></polyline>
-        </svg>
-    </button>
-    <script src="main.js"></script>
+
+    <a href="#top" class="scroll-to-top" aria-label="Back to top">&uarr;</a>
 </body>
 
 </html>

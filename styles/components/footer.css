@@ -1,12 +1,12 @@
-.footer {
-    background: var(--gray-900);
-    color: white;
-    padding: var(--spacing-xl) 0;
-    text-align: center;
-}
-
-.footer-logo {
-    height: 48px;
-    width: auto;
-    margin-bottom: var(--spacing-md);
+.footer-strip {
+    border-top: 1px solid var(--dark-rule);
+    padding: 24px var(--ruled-grid-padding-x);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-family: var(--font-family-mono);
+    font-size: 12px;
+    color: var(--dark-meta);
 }
