@@ -1,0 +1,23 @@
+Copyright (c) 2024-2026 Waghorn Technology Ltd. All rights reserved.
+
+This repository contains the source code and content of the Waghorn Technology
+Ltd website at waghorn.tech. It is public so that the work can be read and
+referenced. It is not open source.
+
+No permission is granted to copy, modify, merge, publish, distribute,
+sublicense, sell, or create derivative works from any part of this repository,
+in whole or in part, for any purpose, without the prior written permission of
+Waghorn Technology Ltd.
+
+The Waghorn Technology name, logo, and other brand assets are trademarks of
+Waghorn Technology Ltd and are not licensed for reuse under any circumstances.
+
+Third-party components are licensed separately by their respective owners and
+are not covered by the terms above:
+
+  IBM Plex Sans and IBM Plex Mono, in fonts/
+  Copyright (c) 2017 IBM Corp. with Reserved Font Name "Plex"
+  Licensed under the SIL Open Font License, Version 1.1
+  Full terms in fonts/LICENSE.txt
+
+Enquiries: enquiries@waghorn.tech
