@@ -1,42 +1,57 @@
 .header {
-    position: fixed;
-    width: 100%;
+    position: sticky;
     top: 0;
-    left: 0;
-    z-index: 1000;
-    transition: all var(--transition-base);
+    z-index: 20;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
 }
 
-.header.scrolled {
-    background-color: white;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+@supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+    .header {
+        background: rgba(246, 246, 244, .88);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
 }
 
 .header-content {
+    height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-sm) 0;
+    gap: 24px;
 }
 
-.logo-container {
+.logo-lockup {
     display: flex;
     align-items: center;
-    gap: var(--spacing-sm);
-}
-
-.logo-container a {
-    display: flex;
-    text-decoration: none;
+    gap: 12px;
+    color: var(--ink);
 }
 
 .logo {
-    height: 48px;
+    height: 30px;
     width: auto;
 }
 
-.company-name {
-    font-size: 1.25rem;
+.wordmark {
+    font-family: var(--font-family-mono);
+    font-size: 14px;
     font-weight: 600;
-    color: var(--gray-800);
+    letter-spacing: -.01em;
+}
+
+.wordmark-suffix {
+    color: var(--faint);
+}
+
+@media (max-width: 639px) {
+    .header-content {
+        height: auto;
+        min-height: var(--header-height);
+        flex-wrap: wrap;
+        align-content: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
 }

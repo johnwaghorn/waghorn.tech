@@ -1,0 +1,15 @@
+.ruled-grid {
+    border-left: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+}
+
+.section-dark .ruled-grid {
+    border-color: var(--dark-rule);
+}
+
+@media (max-width: 759px) {
+    .ruled-grid {
+        border-left: 0;
+        border-right: 0;
+    }
+}

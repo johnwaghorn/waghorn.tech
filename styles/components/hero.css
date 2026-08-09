@@ -1,0 +1,132 @@
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hero-lead {
+    padding: 96px var(--ruled-grid-padding-x) 88px;
+    border-right: 1px solid var(--rule);
+}
+
+.hero-eyebrow {
+    margin-bottom: 32px;
+}
+
+.hero-title {
+    font-size: 56px;
+    line-height: 1.06;
+    letter-spacing: -.03em;
+    margin: 0 0 28px;
+}
+
+.hero-body {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--body);
+    max-width: 44ch;
+    margin: 0 0 40px;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.hero-aside {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-points {
+    flex: 1;
+    padding: 96px var(--ruled-grid-padding-x) 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 28px;
+}
+
+.hero-point {
+    display: flex;
+    gap: 16px;
+    align-items: baseline;
+}
+
+.hero-point-number {
+    flex: none;
+    width: 24px;
+    font-family: var(--font-family-mono);
+    font-size: 12px;
+    color: var(--faintest);
+}
+
+.hero-point-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.hero-point-body {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--meta);
+}
+
+.hero-strip {
+    border-top: 1px solid var(--rule);
+    padding: 24px var(--ruled-grid-padding-x);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    font-family: var(--font-family-mono);
+    font-size: 12px;
+    color: var(--faint);
+}
+
+.hero-strip a {
+    transition: color var(--transition-base);
+}
+
+.hero-strip a:hover {
+    color: var(--ink);
+}
+
+@media (max-width: 1099px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-lead {
+        padding: 72px var(--ruled-grid-padding-x) 56px;
+        border-right: 0;
+        border-bottom: 1px solid var(--rule);
+    }
+
+    .hero-points {
+        padding: 56px var(--ruled-grid-padding-x) 40px;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 759px) {
+    .hero-title {
+        font-size: 38px;
+    }
+
+    .hero-body {
+        font-size: 17px;
+        margin-bottom: 32px;
+    }
+
+    .hero-lead {
+        padding: 48px var(--ruled-grid-padding-x) 40px;
+    }
+
+    .hero-points {
+        padding: 40px var(--ruled-grid-padding-x) 32px;
+        gap: 24px;
+    }
+}

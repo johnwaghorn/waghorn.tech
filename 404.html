@@ -4,71 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page not found - Waghorn Technology</title>
     <meta name="description" content="Page not found - Waghorn Technology Ltd.">
     <meta name="robots" content="noindex">
-    <title>Page Not Found | Waghorn Technology</title>
-    <link rel="stylesheet" href="styles/base/variables.css">
-    <link rel="stylesheet" href="styles/base/reset.css">
-    <link rel="stylesheet" href="styles/layout/container.css">
-    <link rel="stylesheet" href="styles/layout/sections.css">
-    <link rel="stylesheet" href="styles/components/header.css">
-    <link rel="stylesheet" href="styles/components/nav.css">
-    <link rel="stylesheet" href="styles/components/buttons.css">
-    <link rel="stylesheet" href="styles/components/services.css">
-    <link rel="stylesheet" href="styles/components/footer.css">
+    <meta name="theme-color" content="#f6f6f4">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="preload" href="/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/ibm-plex-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="/styles/base/self-hosted-fonts.css">
+    <link rel="stylesheet" href="/styles/base/variables.css">
+    <link rel="stylesheet" href="/styles/base/reset.css">
+    <link rel="stylesheet" href="/styles/layout/container.css">
+    <link rel="stylesheet" href="/styles/layout/ruled-grid.css">
+    <link rel="stylesheet" href="/styles/layout/sections.css">
+    <link rel="stylesheet" href="/styles/components/header.css">
+    <link rel="stylesheet" href="/styles/components/nav.css">
+    <link rel="stylesheet" href="/styles/components/buttons.css">
+    <link rel="stylesheet" href="/styles/components/notfound.css">
+    <link rel="stylesheet" href="/styles/components/footer.css">
 </head>
-<body>
+
+<body class="notfound-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo-container">
-                    <a href="/#home">
-                        <img src="waghorn_technology_ltd_logo.webp" alt="Waghorn Technology Logo" class="logo">
-                    </a>
-                    <span class="company-name">Waghorn Technology</span>
-                </div>
-                <nav class="nav-desktop">
-                    <a href="/#home" class="nav-link">Home</a>
-                    <a href="/#services" class="nav-link">Services</a>
-                    <a href="/#about" class="nav-link">About</a>
-                    <a href="/#contact" class="nav-link">Contact</a>
+                <a href="/" class="logo-lockup">
+                    <img src="/waghorn_technology_ltd_logo.webp" alt="" class="logo" width="1963" height="2009">
+                    <span class="wordmark">waghorn<span class="wordmark-suffix">.tech</span></span>
+                </a>
+                <nav class="nav" aria-label="Primary">
+                    <a href="/#services" class="nav-section-link">services</a>
+                    <a href="/#stack" class="nav-section-link">stack</a>
+                    <a href="/#about" class="nav-section-link">about</a>
+                    <a href="/#contact" class="button button-compact">get in touch</a>
                 </nav>
-                <button class="mobile-menu-button" aria-label="Toggle menu" aria-expanded="false">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
-            <div class="mobile-menu">
-                <a href="/#home" class="nav-link">Home</a>
-                <a href="/#services" class="nav-link">Services</a>
-                <a href="/#about" class="nav-link">About</a>
-                <a href="/#contact" class="nav-link">Contact</a>
             </div>
         </div>
     </header>
-    <section class="hero">
+
+    <main id="main">
         <div class="container">
-            <h1>Page Not Found</h1>
-            <p>The page you're looking for doesn't exist or may have been moved.</p>
-            <a href="/" class="button">Back to Homepage</a>
+            <div class="ruled-grid notfound">
+                <span class="label label-accent">Error 404</span>
+                <h1 class="notfound-title">This page doesn't exist.</h1>
+                <p class="notfound-body">The link may be out of date, or the page may have moved. Everything we do
+                    lives on the homepage. Send us an email if you'd rather we pointed you at the right thing.</p>
+                <div class="notfound-actions">
+                    <a href="/" class="button">Back to the homepage</a>
+                    <a href="mailto:enquiries@waghorn.tech" class="button-quiet">enquiries@waghorn.tech</a>
+                </div>
+            </div>
         </div>
-    </section>
-    <footer class="footer">
+    </main>
+
+    <footer class="section-dark">
         <div class="container">
-            <p>&copy; <span id="currentYear"></span> Waghorn Technology Ltd. All Rights Reserved.</p>
+            <div class="ruled-grid footer-strip">
+                <span>&copy; Waghorn Technology Ltd. All rights reserved.</span>
+                <span>waghorn.tech</span>
+            </div>
         </div>
     </footer>
-    <button class="scroll-top" aria-label="Scroll to top">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="18 15 12 9 6 15"></polyline>
-        </svg>
-    </button>
-    <script src="main.js"></script>
 </body>
 
 </html>

@@ -1,24 +1,56 @@
 :root {
-    --primary: #2563eb;
-    --primary-dark: #1d4ed8;
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-600: #4b5563;
-    --gray-800: #1f2937;
-    --gray-900: #111827;
+    --paper: #f6f6f4;
+    --paper-alt: #efeeea;
+    --paper-panel: #f1f0ec;
 
-    --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --rule: #dedcd6;
+    --rule-strong: #d5d3cb;
+    --rule-muted: #c9c7bf;
 
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
+    --ink: #16181c;
+    --body: #45443f;
+    --body-muted: #5a5952;
+    --meta: #6b6a64;
+    --nav: #4a4a46;
+    --faint: #8a8880;
+    --faintest: #a3a199;
 
-    --container-max-width: 1200px;
+    --accent: #1e3a5f;
+    --accent-on-dark: #8d99ad;
 
-    --transition-base: 0.3s ease;
+    --dark-rule: #2c2f36;
+    --dark-rule-strong: #3a3f48;
+    --dark-body: #a8a69e;
+    --dark-meta: #75736c;
 
-    --border-radius-sm: 0.5rem;
-    --border-radius-full: 9999px;
+    --font-family-base: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --font-family-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+    --container-max-width: 1180px;
+    --gutter: 32px;
+    --header-height: 68px;
+
+    --ruled-grid-padding-x: 56px;
+
+    --border-radius-sm: 2px;
+    --transition-base: 140ms ease;
+}
+
+@media (max-width: 1099px) {
+    :root {
+        --ruled-grid-padding-x: 32px;
+    }
+}
+
+@media (max-width: 759px) {
+    :root {
+        --gutter: 20px;
+        --ruled-grid-padding-x: 20px;
+    }
+}
+
+@media (max-width: 639px) {
+    :root {
+        --header-height: 104px;
+    }
 }

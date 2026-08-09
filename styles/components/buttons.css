@@ -1,45 +1,37 @@
 .button {
     display: inline-flex;
     align-items: center;
-    gap: var(--spacing-xs);
-    background: var(--primary);
-    color: white;
-    padding: var(--spacing-xs) var(--spacing-lg);
+    justify-content: center;
+    font-family: var(--font-family-mono);
+    font-size: 14px;
+    background: var(--accent);
+    color: var(--paper);
+    padding: 14px 24px;
     border-radius: var(--border-radius-sm);
-    text-decoration: none;
     transition: background-color var(--transition-base);
 }
 
 .button:hover {
-    background: var(--primary-dark);
+    background: var(--ink);
 }
 
-.scroll-top {
-    position: fixed;
-    bottom: var(--spacing-lg);
-    right: var(--spacing-lg);
-    background: var(--primary);
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: var(--border-radius-full);
-    display: flex;
+.button-compact {
+    font-size: 13px;
+    padding: 9px 16px;
+}
+
+.button-quiet {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity var(--transition-base), visibility var(--transition-base);
-    border: none;
+    font-family: var(--font-family-mono);
+    font-size: 14px;
+    color: var(--body);
+    padding: 14px 4px;
+    border-bottom: 1px solid var(--rule-muted);
+    transition: color var(--transition-base), border-color var(--transition-base);
 }
 
-.scroll-top.visible {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-
-.scroll-top:hover {
-    background: var(--primary-dark);
+.button-quiet:hover {
+    color: var(--ink);
+    border-bottom-color: var(--ink);
 }
