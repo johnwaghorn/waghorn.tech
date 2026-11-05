@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What websites can see about you - Waghorn Technology</title>
+    <meta name="description" content="See what any website can learn about you and your device, without asking.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#f6f6f4">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="preload" href="/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/ibm-plex-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="/styles/base/self-hosted-fonts.css">
+    <link rel="stylesheet" href="/styles/base/variables.css">
+    <link rel="stylesheet" href="/styles/base/reset.css">
+    <link rel="stylesheet" href="/styles/layout/container.css">
+    <link rel="stylesheet" href="/styles/layout/ruled-grid.css">
+    <link rel="stylesheet" href="/styles/layout/sections.css">
+    <link rel="stylesheet" href="/styles/components/header.css">
+    <link rel="stylesheet" href="/styles/components/nav.css">
+    <link rel="stylesheet" href="/styles/components/buttons.css">
+    <link rel="stylesheet" href="/styles/components/notfound.css">
+    <link rel="stylesheet" href="/styles/components/url-test.css">
+    <link rel="stylesheet" href="/styles/components/footer.css">
+</head>
+
+<body class="notfound-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo-lockup">
+                    <img src="/waghorn_technology_ltd_logo.webp" alt="" class="logo" width="1963" height="2009">
+                    <span class="wordmark">waghorn<span class="wordmark-suffix">.tech</span></span>
+                </a>
+                <nav class="nav" aria-label="Primary">
+                    <a href="/#services" class="nav-section-link">services</a>
+                    <a href="/#stack" class="nav-section-link">stack</a>
+                    <a href="/#about" class="nav-section-link">about</a>
+                    <a href="/#contact" class="button button-compact">get in touch</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="container">
+            <div class="ruled-grid notfound">
+                <span class="label label-accent">URL test</span>
+                <h1 class="notfound-title">Here's what this website can see about you.</h1>
+                <p class="notfound-body">You didn't give permission for any of this. Every website you visit can
+                    read the same details the moment the page loads. This page doesn't save any of it or send it
+                    anywhere. Your browser works it all out, and the only extra request is back to this site to
+                    show you your IP address.</p>
+
+                <noscript>
+                    <p class="notfound-body">JavaScript is turned off, so this page can't show you much. Websites can
+                        still see your IP address, your browser and your language, because your browser sends them
+                        with every request.</p>
+                </noscript>
+
+                <div id="report"></div>
+
+                <div class="notfound-actions">
+                    <a href="/" class="button">Back to the homepage</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="section-dark">
+        <div class="container">
+            <div class="ruled-grid footer-strip">
+                <span>&copy; Waghorn Technology Ltd. All rights reserved.</span>
+                <span>waghorn.tech</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var report = document.getElementById('report');
+            var fingerprintParts = [];
+
+            function yesNo(value) {
+                return value ? 'Yes' : 'No';
+            }
+
+            function addRow(list, row) {
+                var dt = document.createElement('dt');
+                var dd = document.createElement('dd');
+                dt.textContent = row.label;
+                dd.textContent = String(row.value);
+                list.appendChild(dt);
+                list.appendChild(dd);
+            }
+
+            // rows: [{ label, value, fingerprint }]. Rows with no value are skipped.
+            function addSection(title, intro, rows) {
+                var section = document.createElement('section');
+                var heading = document.createElement('h2');
+                var text = document.createElement('p');
+                var list = document.createElement('dl');
+
+                section.className = 'url-test-section';
+                heading.className = 'url-test-heading';
+                text.className = 'url-test-intro';
+                list.className = 'url-test-list';
+                heading.textContent = title;
+                text.textContent = intro;
+
+                rows.forEach(function (row) {
+                    if (row.value === undefined || row.value === null || row.value === '') {
+                        return;
+                    }
+                    addRow(list, row);
+                    if (row.fingerprint) {
+                        fingerprintParts.push(row.label + '=' + row.value);
+                    }
+                });
+
+                section.appendChild(heading);
+                section.appendChild(text);
+                section.appendChild(list);
+                report.appendChild(section);
+                return list;
+            }
+
+            function media(query) {
+                return window.matchMedia && window.matchMedia(query).matches;
+            }
+
+            function gpu() {
+                try {
+                    var gl = document.createElement('canvas').getContext('webgl');
+                    if (!gl) {
+                        return null;
+                    }
+                    var info = gl.getExtension('WEBGL_debug_renderer_info');
+                    return gl.getParameter(info ? info.UNMASKED_RENDERER_WEBGL : gl.RENDERER);
+                } catch (e) {
+                    return null;
+                }
+            }
+
+            // How you got here
+            var urlRows = [{ label: 'Full address', value: window.location.href }];
+            var params = new URLSearchParams(window.location.search);
+            var paramCount = 0;
+            params.forEach(function (value, key) {
+                urlRows.push({ label: '?' + key, value: value === '' ? '(empty)' : value });
+                paramCount++;
+            });
+            if (paramCount === 0) {
+                urlRows.push({ label: 'Query parameters', value: 'None. Try adding ?search=123 to the address.' });
+            }
+            urlRows.push({
+                label: 'Came from',
+                value: document.referrer || 'Unknown. You typed the address, used a bookmark, or the last site hid it.'
+            });
+            urlRows.push({ label: "Pages in this tab's history", value: window.history.length });
+            addSection('How you got here',
+                'The address you opened and, often, the site that sent you. Links can carry tracking codes in the address too.',
+                urlRows);
+
+            // Network
+            var networkList = addSection('Your connection',
+                'Your IP address goes with every request you make, so every site sees it. It gives away your rough location and your internet provider.',
+                [{ label: 'IP address', value: 'Looking up…' }]);
+
+            fetch('/cdn-cgi/trace', { cache: 'no-store' })
+                .then(function (response) {
+                    if (!response.ok) {
+                        throw new Error('trace unavailable');
+                    }
+                    return response.text();
+                })
+                .then(function (text) {
+                    var trace = {};
+                    text.trim().split('\n').forEach(function (line) {
+                        var i = line.indexOf('=');
+                        if (i > 0) {
+                            trace[line.slice(0, i)] = line.slice(i + 1);
+                        }
+                    });
+
+                    var country = trace.loc;
+                    try {
+                        country = new Intl.DisplayNames(['en-GB'], { type: 'region' }).of(trace.loc) + ' (' + trace.loc + ')';
+                    } catch (e) { /* keep the code */ }
+
+                    networkList.textContent = '';
+                    [
+                        { label: 'IP address', value: trace.ip },
+                        { label: 'Country', value: country },
+                        { label: 'Nearest Cloudflare data centre', value: trace.colo },
+                        { label: 'Connection protocol', value: trace.http },
+                        { label: 'Encryption', value: trace.tls }
+                    ].forEach(function (row) {
+                        if (row.value) {
+                            addRow(networkList, row);
+                        }
+                    });
+                })
+                .catch(function () {
+                    networkList.textContent = '';
+                    addRow(networkList, {
+                        label: 'IP address',
+                        value: "Can't be shown here. This only works on the live site, but the site can still see it."
+                    });
+                });
+
+            // Device and browser
+            var ua = navigator.userAgentData;
+            var deviceRows = [
+                {
+                    label: 'Browser',
+                    value: ua && ua.brands ? ua.brands.map(function (b) { return b.brand + ' ' + b.version; })
+                        .filter(function (b) { return !/not.a.brand/i.test(b); }).join(', ') : null,
+                    fingerprint: true
+                },
+                { label: 'Operating system', value: (ua && ua.platform) || navigator.platform, fingerprint: true },
+                { label: 'Mobile device', value: ua ? yesNo(ua.mobile) : null, fingerprint: true },
+                { label: 'User agent', value: navigator.userAgent, fingerprint: true },
+                { label: 'Graphics card', value: gpu(), fingerprint: true },
+                { label: 'CPU cores', value: navigator.hardwareConcurrency, fingerprint: true },
+                { label: 'Memory', value: navigator.deviceMemory ? 'About ' + navigator.deviceMemory + ' GB' : null, fingerprint: true },
+                { label: 'Screen size', value: screen.width + ' × ' + screen.height, fingerprint: true },
+                { label: 'Window size', value: window.innerWidth + ' × ' + window.innerHeight },
+                { label: 'Pixel density', value: window.devicePixelRatio + 'x', fingerprint: true },
+                { label: 'Colour depth', value: screen.colorDepth + '-bit', fingerprint: true },
+                { label: 'Touchscreen', value: navigator.maxTouchPoints > 0 ? 'Yes, up to ' + navigator.maxTouchPoints + ' fingers' : 'No', fingerprint: true }
+            ];
+            var deviceList = addSection('Your device and browser',
+                'Sites can read what you are using and how powerful it is. They use it for compatibility, and for telling you apart from everyone else.',
+                deviceRows);
+
+            if (navigator.getBattery) {
+                navigator.getBattery().then(function (battery) {
+                    addRow(deviceList, {
+                        label: 'Battery',
+                        value: Math.round(battery.level * 100) + '%' + (battery.charging ? ', charging' : ', not charging')
+                    });
+                }).catch(function () { /* not available */ });
+            }
+
+            // Settings and preferences
+            var connection = navigator.connection;
+            var timeZone = null;
+            try {
+                timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            } catch (e) { /* not available */ }
+
+            addSection('Your settings',
+                'Your language, time zone and display settings say where you probably are and how you like to use your device.',
+                [
+                    { label: 'Languages', value: (navigator.languages || [navigator.language]).join(', '), fingerprint: true },
+                    { label: 'Time zone', value: timeZone, fingerprint: true },
+                    { label: 'Your local time', value: new Date().toLocaleString('en-GB', { dateStyle: 'full', timeStyle: 'long' }) },
+                    { label: 'Dark mode', value: yesNo(media('(prefers-color-scheme: dark)')), fingerprint: true },
+                    { label: 'Reduced motion', value: yesNo(media('(prefers-reduced-motion: reduce)')), fingerprint: true },
+                    { label: 'Cookies allowed', value: yesNo(navigator.cookieEnabled), fingerprint: true },
+                    { label: 'Do Not Track', value: navigator.doNotTrack === '1' ? 'On' : 'Off', fingerprint: true },
+                    { label: 'Global Privacy Control', value: navigator.globalPrivacyControl ? 'On' : 'Off or not supported', fingerprint: true },
+                    {
+                        label: 'Connection speed',
+                        value: connection && connection.effectiveType
+                            ? connection.effectiveType.toUpperCase() + (connection.downlink ? ', about ' + connection.downlink + ' Mbps' : '')
+                            : null
+                    }
+                ]);
+
+            // Fingerprint
+            var fingerprintList = addSection('Your fingerprint',
+                "Put together, these details are often unique to you. Sites can use them to recognise you without cookies. Clearing cookies or opening a private window usually won't change it.",
+                []);
+
+            if (window.crypto && crypto.subtle && window.TextEncoder) {
+                crypto.subtle.digest('SHA-256', new TextEncoder().encode(fingerprintParts.join('|')))
+                    .then(function (hash) {
+                        var hex = Array.prototype.map.call(new Uint8Array(hash), function (b) {
+                            return b.toString(16).padStart(2, '0');
+                        }).join('');
+                        addRow(fingerprintList, { label: 'Your fingerprint ID', value: hex.slice(0, 16) });
+                        addRow(fingerprintList, { label: 'Built from', value: fingerprintParts.length + ' of the details above' });
+                    });
+            }
+        })();
+    </script>
+</body>
+
+</html>
